@@ -16,8 +16,7 @@ import android.widget.Toast
 import com.example.formula1.databinding.ActivityLoginBinding
 
 import com.example.formula1.R
-import com.example.formula1.SettingsActivity
-import com.example.formula1.ui.overview.OverviewAcrivity
+import com.example.formula1.ui.overview.OverviewActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -102,7 +101,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun gotoOverviewActivity() {
-        val intent = Intent(this, SettingsActivity::class.java)
+        val intent = Intent(this, OverviewActivity::class.java)
         startActivity(intent)
     }
 
