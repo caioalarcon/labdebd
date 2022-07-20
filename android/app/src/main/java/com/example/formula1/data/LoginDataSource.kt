@@ -1,5 +1,6 @@
 package com.example.formula1.data
 
+import com.example.formula1.PostgresConnection
 import com.example.formula1.data.model.LoggedInUser
 import java.io.IOException
 
@@ -7,6 +8,7 @@ import java.io.IOException
  * Class that handles authentication w/ login credentials and retrieves user information.
  */
 class LoginDataSource {
+    val connection = PostgresConnection()
 
     fun login(username: String, password: String): Result<LoggedInUser> {
         try {

@@ -42,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
 
             // disable login button unless both username / password is valid
             login.isEnabled = loginState.isDataValid
-
+            login.isEnabled = true
             if (loginState.usernameError != null) {
                 username.error = getString(loginState.usernameError)
             }
@@ -94,8 +94,10 @@ class LoginActivity : AppCompatActivity() {
             }
 
             login.setOnClickListener {
-                loading.visibility = View.VISIBLE
-                loginViewModel.login(username.text.toString(), password.text.toString())
+                gotoOverviewActivity()
+
+                //loading.visibility = View.VISIBLE
+                //loginViewModel.login(username.text.toString(), password.text.toString())
             }
         }
     }
